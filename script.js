@@ -26,22 +26,31 @@ function renderCards(data) {
         html += `
         <div class="country-card">
             <img src="${country.flags.png}" alt="Flag of ${country.name.common}">
-            <h2>${country.name.common}</h2>
-            <p>Population: ${country.population}</p>
-            <p>Region: ${country.region}</p>
-            <p>Capital: ${country.capital}</p>
+            <h2><strong>${country.name.common}</strong></h2>
+            <p><strong>Population: </strong> ${country.population}</p>
+            <p><strong>Region: </strong> ${country.region}</p>
+            <p><strong>Capital: </strong> ${country.capital}</p>
         </div>
         `;
     });
+
     container.innerHTML = html;
 }
 
-document.getElementById('search').addEventListener('input', function() {
-    const searchValue = this.value.toLowerCase();
+function applyFilters() {
+    const searchValue = document.getElementById('search').value.toLowerCase();
+    const regionValue = document.getElementById('region-filter').value;
+
     const filtered = countries.filter(country => {
-        return country.name.common.toLowerCase().includes(searchValue);
+        const matchesSearch = country.name.common.toLowerCase().includes(searchValue);
+        const matchesRegion = regionValue === '' || country.region === regionValue;
+        return matchesSearch && matchesRegion;
     });
+
     renderCards(filtered);
-});
+}
+
+document.getElementById('search').addEventListener('input', applyFilters);
+document.getElementById('region-filter').addEventListener('change', applyFilters);
 
 loadCountries();
