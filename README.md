@@ -50,6 +50,7 @@ The project is made up of three files:
 
 ```
 RestAPICountries/
+├── TEMPLATES
 ├── index.html
 ├── styles.css
 ├── script.js
