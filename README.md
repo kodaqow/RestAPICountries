@@ -4,19 +4,6 @@ A simple web app that displays information about countries around the world. Bui
 
 ---
 
-## 📸 Preview
-
-**Desktop**
-![Desktop preview](preview-desktop.png)
-
-**Tablet**
-![Tablet preview](preview-tablet.png)
-
-**Mobile**
-![Mobile preview](preview-mobile.png)
-
----
-
 ## 🔍 What it does
 
 - Fetches country data from a local `countries.json` file
@@ -43,20 +30,6 @@ The project is made up of three files:
 2. It loops through every country and builds an HTML card for each one
 3. All the cards get injected into the `<div id="countries">` in `index.html`
 4. When you type in the search bar or pick a region, the list filters live without reloading the page
-
----
-
-## 🚀 How to run it
-
-Since the project uses `fetch()` to load the JSON file, you need to open it through a local server — not by double-clicking the HTML file.
-
-The easiest way is with **WebStorm**: open the project, then right-click `index.html` and choose **Open in → Browser**.
-
-Or with Python (no install needed):
-```bash
-python -m http.server 8000
-```
-Then go to `http://localhost:8000` in your browser.
 
 ---
 
