@@ -30,10 +30,8 @@ function renderCards(data) {
             <p><strong>Population: </strong> ${country.population}</p>
             <p><strong>Region: </strong> ${country.region}</p>
             <p><strong>Capital: </strong> ${country.capital}</p>
-            <p><strong>Area: </strong> ${country.area}</p>
-            <p><strong>Languages: </strong> ${country.languages}</p>
-            <p><strong>Currencies: </strong> ${country.currencies}</p>
-            <p><strong>Timezones: </strong> ${country.timezones}</p>
+            <p><strong>Area: </strong> ${country.area} km²</p>
+            <p><strong>Timezone: </strong> ${country.timezones}</p>
         </div>
         `;
     });
