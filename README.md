@@ -51,6 +51,9 @@ The project is made up of three files:
 ```
 RestAPICountries/
 ├── TEMPLATES
+     ├── preview-pc
+     ├── preview-tablet
+     └── preview-mobile
 ├── index.html
 ├── styles.css
 ├── script.js
